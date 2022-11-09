@@ -20,14 +20,9 @@ export default class Dashboard extends Component {
             showSidebar:false,
             presentPage:'home',
             userdata: []
-
-
-
         }
     }
-
-
-
+    
  componentDidMount(){
   
     swal({

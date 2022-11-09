@@ -72,7 +72,7 @@ app.get('/questions', (req, res) => {
 })
 
 //call this endpoint whenever you want to setup database from scratch
-app.post('/setup-database', (req, res) => {
+app.get('/setup-database', (req, res) => {
   let newUserType = new User({
     usertype: 'writters',
     users: []

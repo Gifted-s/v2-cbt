@@ -20,7 +20,6 @@ return (
         {
             this.props.userdata !==[]?
             <Graph userdata={this.props.userdata}/>
-         
             :
             null
 
