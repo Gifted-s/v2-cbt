@@ -13,11 +13,13 @@ const user_data = [
 ]
 const app = express()
 
-app.use(morgan('combined'))
+// app.use(morgan('combined'))
 app.use(fileUpload())
-app.listen(3001, () => {
+const PORT = 3001;
+app.listen(PORT, () => {
   console.log('server listen at port 3001')
 })
+app.use(express.static("files"));
 app.use(express.json())
 app.use(express.urlencoded({
   extended: true
@@ -28,7 +30,8 @@ let config = {}
 
 
 app.post('/post', (req, res) => {
-  if (!req.files) { 
+
+  if (!req.files) {
     return res.status(400).send({ message: "no file was sent.....error" })
   }
   const file = req.files.file
@@ -129,5 +132,5 @@ app.get('/dash', (req, res) => {
 })
 
 app.get('/', (req, res, next) => {
-  res.status(200).send({ welcome: 'welcome guy' })
+  res.status(200).send({ welcome: 'Server Started  ' })
 })

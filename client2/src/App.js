@@ -1,11 +1,10 @@
-import React, { Component, Suspense } from 'react';
-import {Spinner} from 'reactstrap'
-import Home from './Components/Home';
-import ExamPage from './Components/ExamPage';
-import {Switch, Route, BrowserRouter} from 'react-router-dom'
-import Login from './Components/Login';
-import Dashboard from './Components/Dashboard/Dashboard'
-import Result from './Components/Dashboard/Result';
+import React, { Component } from 'react';
+import Home from './components/QuestionUpload/QuestionUpload';
+import ExamPage from './components/Exam/ExamPage';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import Login from './components/Auth/Login';
+import Dashboard from './components/Dashboard/Dashboard';
+import Result from './components/Dashboard/Result';
 export default class App extends Component {
   render() {
     return (

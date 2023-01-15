@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import {  Line, Pie, Doughnut, Bar } from 'react-chartjs-2'
-import {CategoryScale, Chart, LinearScale, ArcElement, PointElement, LineElement, BarElement} from 'chart.js'; 
+import { Line, Pie, Doughnut, Bar } from 'react-chartjs-2'
+import { CategoryScale, Chart, LinearScale, ArcElement, PointElement, LineElement, BarElement } from 'chart.js';
+import { apiRoot } from '../../config/config';
 Chart.register(CategoryScale);
 Chart.register(LinearScale);
 Chart.register(ArcElement)
@@ -10,7 +11,7 @@ Chart.register(LineElement)
 Chart.register(BarElement)
 export default class Graph extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             data: {
                 labels: [],
@@ -21,11 +22,11 @@ export default class Graph extends Component {
 
     componentDidMount() {
         this.makeTime = setInterval(() => {
-            axios.get('http://localhost:3001/dash').then(res => {
+            axios.get(`${apiRoot}/dash`).then(res => {
                 const labels = []
                 const data = []
                 //   const backgroundColors=[]
-                let userdata = res.data.user_data
+                let userdata = res.data.user_data;
 
                 for (let i = 0; i < userdata.length; i++) {
                     data.push(userdata[i].score)
@@ -46,11 +47,6 @@ export default class Graph extends Component {
                                     'rgba(153,102,255,0.6)',
                                     'rgba(255,159,64,0.6)',
                                     'rgba(255,190,132,0.6)',
-                                    // 'skyblue',
-                                    // 'cyan',
-                                    // 'blue',
-                                    // 'springgreen',
-                                    // 'purple',
                                     "rgba(255,99,192,0.6)",
                                     'rgba(54,162,205,0.6)',
                                     'rgba(255,206,100,0.6)',
@@ -89,10 +85,7 @@ export default class Graph extends Component {
     componentWillUnmount() {
         clearInterval(this.makeTime)
     }
-    //   componentDidMount(){
 
-
-    //   }
 
     render() {
 
@@ -147,10 +140,6 @@ export default class Graph extends Component {
 
 
                             </div>
-
-
-
-
 
 
 

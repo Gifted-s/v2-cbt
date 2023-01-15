@@ -31,4 +31,5 @@ Statistical profiling result from isolate-00000092F3993080-10748-v8.log, (52497 
 
    ticks parent  name
   52121   99.3%  C:\WINDOWS\SYSTEM32\ntdll.dll
+  
 
