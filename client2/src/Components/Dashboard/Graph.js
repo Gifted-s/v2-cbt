@@ -31,7 +31,6 @@ export default class Graph extends Component {
                     data.push(userdata[i].score)
                     labels.push(userdata[i].name)
                 }
-                console.log(userdata)
                 this.setState({
                     data: {
                         labels: labels,

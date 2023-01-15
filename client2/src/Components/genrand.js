@@ -10,3 +10,4 @@ function genrand(min , max){
    }
    
 export default genrand
+

@@ -35,8 +35,8 @@ import axios  from 'axios'
       const handleUpload = (e)=>{
          setFile(e.target.files[0])
          const formData = new FormData()
-         formData.append('file',e.target.files[0])
-
+         console.log(e.target.files[0])
+         formData.append('file',e.target.files[0])  
             axios.post('http://localhost:3001/post', formData, {
               headers:{
                "Content-type":'multipart/form-data'
@@ -53,7 +53,7 @@ import axios  from 'axios'
                setUploadedFile({fileName, filePath})
             })
             .catch(err=>{
-               console.log(err.response.status)
+               console.log(err )
             })
 
        } 

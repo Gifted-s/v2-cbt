@@ -28,7 +28,7 @@ let config = {}
 
 
 app.post('/post', (req, res) => {
-  if (!req.files) {
+  if (!req.files) { 
     return res.status(400).send({ message: "no file was sent.....error" })
   }
   const file = req.files.file
