@@ -24,6 +24,14 @@ export default class Login extends Component {
             })
     }
 
+    async loadConfig() {
+        let res = await axios.get(`${apiRoot}/config`)
+        if (res !== null && res.data !== null && res.data.config !== null && res.data.config.course !== null) {
+            this.setState({ course: res.data.config.course, time: res.data.config.time })
+        }
+        return res
+    }
+
     proceed = () => {
         if (!this.state.course) {
             return swal('Oops', 'Sorry admin has not set up this exam or test', 'error')
@@ -34,8 +42,14 @@ export default class Login extends Component {
         }
 
     }
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault()
+        let res = await this.loadConfig()
+        if (res.data.config.course == null) {
+            return swal('Error', 'config could not be loaded', 'error')
+        }
+
+
         if (!this.state.name) {
             return swal('Please enter your name', '', 'error')
         }
