@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Home from './components/QuestionUpload/QuestionUpload';
-import ExamPage from './components/Exam/ExamPage';
+import Home from './Components/QuestionUpload/QuestionUpload';
+import ExamPage from './Components/Exam/ExamPage';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import Login from './components/Auth/Login';
-import Dashboard from './components/Dashboard/Dashboard';
-import Result from './components/Dashboard/Result';
+import Login from './Components/Auth/Login';
+import Dashboard from './Components/Dashboard/Dashboard';
+import Result from './Components/Dashboard/Result';
 export default class App extends Component {
   render() {
     return (

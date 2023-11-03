@@ -141,7 +141,7 @@ class Nav extends Component {
           </ul>
         </div>
         <form class="form-inline">
-          <span class={`time mr-4 ${minute < 2 ? 'animate' : null}`}><FontAwesomeIcon style={{ fontSize: 30, marginRight: 12 }} icon={faClock} /> {!this.state.finish ? `TIME LEFT:  ${minute}MIN: ${seconds}SEC` : `TIMES'S UP:  ${0}MIN: ${0}SEC`} </span>
+          <span style={{backgroundColor:'#CD5C5C', padding:8, alignItems:"center", borderRadius:5, justifyContent:'space-between', display:'flex'}} class={`time mr-4 ${minute < 2 ? 'animate' : null}`}><FontAwesomeIcon style={{ fontSize: 30, marginRight: 12 }} icon={faClock} /> {!this.state.finish ? `TIME LEFT:  ${minute}MIN: ${seconds}SEC` : `TIMES'S UP:  ${0}MIN: ${0}SEC`} </span>
           <button onClick={this.handleSubmit_} style={{ fontWeight: '500' }} class="btn btn-light my-2 my-sm-0" type="button">  SUBMIT <FontAwesomeIcon icon={faArrowCircleRight} /></button>
         </form>
       </nav>

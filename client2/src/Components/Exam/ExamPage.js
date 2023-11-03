@@ -135,12 +135,12 @@ export default class ExamPage extends Component {
                         {this.checkQuestionType(questions[currentIndex].optionD) ? <img alt='questionImage' src={questions[currentIndex].optionD} /> : questions[currentIndex].optionD}
                       </label>
                     </div>
-                    <div className="btns">
+                    <div className="btns row justify-content-between d-flex mt-2 w-100">
                       <div onClick={() => {
                         this.setState((prevState) => {
                           return { currentIndex: prevState.currentIndex === 0 ? questions.length - 1 : prevState.currentIndex - 1 }
                         })
-                      }} className="btn btn-primary">
+                      }} className="btn btn-primary offset-md-1">
                         <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Previous
                       </div>
                       <div
@@ -150,7 +150,7 @@ export default class ExamPage extends Component {
                             return { currentIndex: prevState.currentIndex === questions.length - 1 ? 0 : prevState.currentIndex + 1 }
                           })
                         }} className="btn ml-2 btn-primary">
-                        Next <FontAwesomeIcon icon={faArrowAltCircleRight} />
+                       Save  <FontAwesomeIcon icon={faArrowAltCircleRight} />
                       </div>
                     </div>
 

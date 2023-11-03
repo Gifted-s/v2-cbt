@@ -8,9 +8,7 @@ const User = require('./models/Users')
 mongoose.connect('mongodb://127.0.0.1:27017/merit', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
   console.log('Mongodb connected')
 });
-const user_data = [
-
-]
+let user_data = []
 const app = express()
 
 // app.use(morgan('combined'))
@@ -100,6 +98,7 @@ app.post('/setup', (req, res) => {
     if (err) {
       throw err
     }
+    user_data = []
     console.log(result)
     res.status(200).send({ set_complete: true })
   })
@@ -122,8 +121,6 @@ app.post('/submit', (req, res) => {
   User.updateOne({ usertype: 'writters' }, { $set: { users: user_data } }).then((result) => {
     console.log(result)
   })
-
-
 })
 
 app.get('/dash', (req, res) => {
