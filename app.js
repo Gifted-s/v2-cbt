@@ -119,7 +119,7 @@ app.post('/submit', (req, res) => {
   }
   user_data.push(user_obj)
   User.updateOne({ usertype: 'writters' }, { $set: { users: user_data } }).then((result) => {
-    console.log(result)
+    console.log(result, "user submitted")
   })
 })
 

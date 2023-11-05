@@ -58,11 +58,12 @@ const QuestionUpload = (props) => {
    const handleUpload1 = (e) => {
 
       const formData = new FormData()
-      formData.append('file', e.target.files[0])
-
+      console.log(e.target.files[0])
+      formData.append('file', e.target.files[0] ) ; 
+    
       axios.post(`${apiRoot}/post`, formData, {
          headers: {
-            "Content-type": 'multipart/form-data'
+            "Content-Type": 'multipart/form-data'
          },
          onUploadProgress: (progressEvent) => { 
             setUploadProgress1(parseInt(Math.round((progressEvent.loaded) * 100 / progressEvent.total))) 
@@ -70,25 +71,25 @@ const QuestionUpload = (props) => {
       })
          .then((res) => {
             const { fileName, filePath } = res.data
+            console.log(fileName, filePath)
             setUploadedFile1({ fileName, filePath })
          })
          .catch(err => {
-            console.log(err.response.status)
+            console.log(err)
          })
 
    }
 
 
-
-
    const handleUpload2 = (e) => {
 
       const formData = new FormData()
-      formData.append('file', e.target.files[0])
-
+      console.log(e.target.files[0])
+      formData.append('file', e.target.files[0] ) ; 
+    
       axios.post(`${apiRoot}/post`, formData, {
          headers: {
-            "Content-type": 'multipart/form-data'
+            "Content-Type": 'multipart/form-data'
          },
          onUploadProgress: (progressEvent) => { 
             setUploadProgress2(parseInt(Math.round((progressEvent.loaded) * 100 / progressEvent.total))) 
@@ -96,24 +97,25 @@ const QuestionUpload = (props) => {
       })
          .then((res) => {
             const { fileName, filePath } = res.data
+            console.log(fileName, filePath)
             setUploadedFile2({ fileName, filePath })
          })
          .catch(err => {
-            console.log(err.response.status)
+            console.log(err)
          })
 
    }
 
 
-
    const handleUpload3 = (e) => {
 
       const formData = new FormData()
-      formData.append('file', e.target.files[0])
-
+      console.log(e.target.files[0])
+      formData.append('file', e.target.files[0] ) ; 
+    
       axios.post(`${apiRoot}/post`, formData, {
          headers: {
-            "Content-type": 'multipart/form-data'
+            "Content-Type": 'multipart/form-data'
          },
          onUploadProgress: (progressEvent) => { 
             setUploadProgress3(parseInt(Math.round((progressEvent.loaded) * 100 / progressEvent.total))) 
@@ -121,10 +123,11 @@ const QuestionUpload = (props) => {
       })
          .then((res) => {
             const { fileName, filePath } = res.data
+            console.log(fileName, filePath)
             setUploadedFile3({ fileName, filePath })
          })
          .catch(err => {
-            console.log(err.response.status)
+            console.log(err)
          })
 
    }
@@ -132,11 +135,12 @@ const QuestionUpload = (props) => {
    const handleUpload4 = (e) => {
 
       const formData = new FormData()
-      formData.append('file', e.target.files[0])
-
+      console.log(e.target.files[0])
+      formData.append('file', e.target.files[0] ) ; 
+    
       axios.post(`${apiRoot}/post`, formData, {
          headers: {
-            "Content-type": 'multipart/form-data'
+            "Content-Type": 'multipart/form-data'
          },
          onUploadProgress: (progressEvent) => { 
             setUploadProgress4(parseInt(Math.round((progressEvent.loaded) * 100 / progressEvent.total))) 
@@ -144,10 +148,11 @@ const QuestionUpload = (props) => {
       })
          .then((res) => {
             const { fileName, filePath } = res.data
+            console.log(fileName, filePath)
             setUploadedFile4({ fileName, filePath })
          })
          .catch(err => {
-            console.log(err.response.status)
+            console.log(err)
          })
 
    }
