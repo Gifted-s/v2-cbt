@@ -33,7 +33,7 @@ app.post('/post', (req, res) => {
     return res.status(400).send({ message: "no file was sent.....error" })
   }
   const file = req.files.file
-  file.mv(`${__dirname}/client2/public/images/${file.name}`).then(err => {
+  file.mv(`${__dirname}/client/public/images/${file.name}`).then(err => {
     if (err) {
       console.log(err)
       return res.status(500).send({ error: 'There was an internal error' })

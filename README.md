@@ -1,2 +1,4 @@
-# merit-app
-CCCSPFUTA, Computer Based Exams Testing Software... With React
+# CBT SOFTWARE
+
+A software developed to help students and fellowships conduct mock examinations
+
