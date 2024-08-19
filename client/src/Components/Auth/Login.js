@@ -97,7 +97,7 @@ export default class Login extends Component {
 
                     </div>
                     <div className="col-md-6 right">
-                        <h4 className="login-text">Login to start Exam or Test</h4>
+                        <h4 className="login-text">Login to start exam</h4>
                         <form onSubmit={this.handleSubmit} className="login_form">
                             <div>
                                 <label className="label_login">FULL NAME</label><br />
