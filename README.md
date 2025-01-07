@@ -1,15 +1,15 @@
 # CBT SOFTWARE
 
 <p align="center">
-<img src="/docs/demo2.png" height="120">
+<img src="/docs/demo2.png">
 </p>
 
 <p align="center">
-<img src="/docs/demo.png" height="120">
+<img src="/docs/demo.png">
 </p>
 
 <p align="center">
-<img src="/docs/demo3.png" height="120">
+<img src="/docs/demo3.png">
 </p>
 
 # Application Setup Guide
@@ -28,7 +28,7 @@ Ensure you have the following installed on your system before proceeding:
    Make sure Docker is running on your machine.
 
 <p align="center">
-<img src="/docs/demo4.png" height="120">
+<img src="/docs/demo4.png">
 </p>
 
 
@@ -79,7 +79,6 @@ Ensure you have the following installed on your system before proceeding:
 
 ---
 
-Happy coding!
 
 
 
